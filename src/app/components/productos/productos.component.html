@@ -1,0 +1,19 @@
+<div class="titulo-homeProductos d-flex justify-content-center align-items-center">
+  <h2>Seleccione su producto</h2>
+</div>
+<div class="d-flex justify-content-center align-items-center flex-wrap">
+  <div
+    *ngFor="let producto of productos; index as i; first as isFirst"
+    class="card card-homeProductos"
+    style="width: 18rem"
+  >
+    <!-- <img src="..." class="card-img-top" alt="..." /> -->
+    <div class="card-body">
+      <h5 class="card-title">{{ producto.nombre }}</h5>
+      <p class="card-text">
+        {{ producto.detalles }}
+      </p>
+      <a href="#" class="btn btn-primary">Agregar al carrito</a>
+    </div>
+  </div>
+</div>
