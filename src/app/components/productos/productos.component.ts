@@ -13,9 +13,11 @@ export class ProductosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.productos)
   }
 
-  
+  agregarProducto(){
+    //aca llenar una segunda lista, carrito. En el Checkout vamos a acceder a esta lista de productos seleccionados
+    console.log("agregarProducto");
+  }
 
 }

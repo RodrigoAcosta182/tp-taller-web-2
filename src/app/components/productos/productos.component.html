@@ -13,7 +13,7 @@
       <p class="card-text">
         {{ producto.detalles }}
       </p>
-      <a href="#" class="btn btn-primary">Agregar al carrito</a>
+      <input (ngSubmit)="agregarProducto()" class="btn btn-primary" value="Agregar al carrito" >
     </div>
   </div>
 </div>
