@@ -20,3 +20,7 @@ body {
   --color-gray: rgb(163, 163, 163);
 }
 
+.pointer{
+  cursor: pointer;
+}
+

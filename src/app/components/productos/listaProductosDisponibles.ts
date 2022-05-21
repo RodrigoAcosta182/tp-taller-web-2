@@ -1,4 +1,6 @@
-export const listaProductos = [
+import { IProducto } from "src/app/models/producto.interface";
+
+export const listaProductosDisponibles : IProducto[] = [
   {
     id: 1,
     nombre: 'product1',

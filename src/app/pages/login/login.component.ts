@@ -49,4 +49,8 @@ export class LoginComponent implements OnInit {
       console.log("los campos usuario o password no pueden estar vacios");
     }
   }
+
+  irARegistro(){
+    this.router.navigate(["/signup"])
+  }
 }

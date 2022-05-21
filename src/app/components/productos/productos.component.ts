@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {listaProductos} from "./listaProductos"
+import { carritoProductos } from './carritoProductos';
+import {listaProductosDisponibles} from "./listaProductosDisponibles"
 
 @Component({
   selector: 'app-productos',
@@ -8,16 +9,17 @@ import {listaProductos} from "./listaProductos"
 })
 export class ProductosComponent implements OnInit {
 
-  productos = listaProductos;
-
+  productos = listaProductosDisponibles;
+  carrito = carritoProductos
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  agregarProducto(){
+  agregarProducto( producto : any){
     //aca llenar una segunda lista, carrito. En el Checkout vamos a acceder a esta lista de productos seleccionados
-    console.log("agregarProducto");
+    carritoProductos.push(producto)
+    console.log(carritoProductos)
   }
 
 }

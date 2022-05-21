@@ -1,4 +1,6 @@
-<div class="titulo-homeProductos d-flex justify-content-center align-items-center">
+<div
+  class="titulo-homeProductos d-flex justify-content-center align-items-center"
+>
   <h2>Seleccione su producto</h2>
 </div>
 <div class="d-flex justify-content-center align-items-center flex-wrap">
@@ -13,7 +15,9 @@
       <p class="card-text">
         {{ producto.detalles }}
       </p>
-      <input (ngSubmit)="agregarProducto()" class="btn btn-primary" value="Agregar al carrito" >
+      <button (click)="agregarProducto(producto)" class="btn btn-primary">
+        Agregar al carrito
+      </button>
     </div>
   </div>
 </div>
