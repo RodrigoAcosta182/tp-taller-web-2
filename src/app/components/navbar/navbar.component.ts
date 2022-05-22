@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { carritoProductos } from '../productos/carritoProductos';
+import { Router } from '@angular/router';
+import { carritoProductos } from '../carrito/carritoProductos';
 
 @Component({
   selector: 'app-navbar',
@@ -8,9 +9,18 @@ import { carritoProductos } from '../productos/carritoProductos';
 })
 export class NavbarComponent implements OnInit {
   carrito = carritoProductos
-  constructor() { }
+  constructor(
+    protected router: Router,
+  ) {}
 
   ngOnInit(): void {
   }
 
+  irAVerPedido(){
+    this.router.navigate(["/verpedido"])
+  }
+  irAHome(){
+    this.router.navigate(["/home"])
+  }
 }
+

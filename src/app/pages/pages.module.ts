@@ -8,8 +8,26 @@ import { ComponentsModule } from '../components/components.module';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { SignupComponent } from './signup/signup.component';
 
+import { CambiarpasswordComponent } from './cambiarpassword/cambiarpassword.component';
+import { RecuperarcuentaComponent } from './recuperarcuenta/recuperarcuenta.component';
+import { VerpedidoComponent } from './verpedido/verpedido.component';
+
 @NgModule({
-  declarations: [LoginComponent, HomeComponent, CheckoutComponent, SignupComponent],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, HttpClientModule,ComponentsModule],
+  declarations: [
+    LoginComponent,
+    HomeComponent,
+    CheckoutComponent,
+    SignupComponent,
+    CambiarpasswordComponent,
+    RecuperarcuentaComponent,
+    VerpedidoComponent,
+  ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    ComponentsModule,
+  ],
 })
 export class PagesModule {}

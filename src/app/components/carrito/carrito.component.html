@@ -1,0 +1,27 @@
+<div class="cardCarritoContainer">
+  <div
+    class="list-group"
+    *ngFor="let producto of carrito; index as i; first as isFirst"
+  >
+    <a
+      class="list-group-item list-group-item-action d-flex w-100 justify-content-between"
+    >
+      <div class="d-flex">
+        <img
+          src="{{ producto.imagen }}"
+          class="card-img-top"
+          alt="..."
+          style="width: 150px"
+        />
+        <div class="cardCarritoDetallesProducto">
+          <h5 class="mb-1">{{ producto.nombre }}</h5>
+          <p class="mb-1">Precio por sesion: $ {{ producto.precio }}</p>
+          <small class="text-muted">{{ producto.detalles }}</small>
+        </div>
+      </div>
+      <div>
+        <button (click)="quitarProducto(producto.id)" class="btn btn-danger">Quitar</button>
+      </div>
+    </a>
+  </div>
+</div>

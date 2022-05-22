@@ -53,4 +53,7 @@ export class LoginComponent implements OnInit {
   irARegistro(){
     this.router.navigate(["/signup"])
   }
+  irARecuperarCuenta(){
+    this.router.navigate(["/recuperarcuenta"])
+  }
 }
