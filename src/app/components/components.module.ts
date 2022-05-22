@@ -6,12 +6,13 @@ import { FormulariopagoComponent } from './formulariopago/formulariopago.compone
 import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { ToasterComponent } from './toaster/toaster.component';
+import { FormularioRecuperarCuentaComponent } from './formulario-recuperar-cuenta/formulario-recuperar-cuenta.component';
 
 // en exports voy agregando los componentes
 
 @NgModule({
-  declarations: [NavbarComponent, ProductosComponent, FormulariopagoComponent, FormularioRegistroComponent, CarritoComponent, ToasterComponent],
+  declarations: [NavbarComponent, ProductosComponent, FormulariopagoComponent, FormularioRegistroComponent, CarritoComponent, ToasterComponent, FormularioRecuperarCuentaComponent],
   imports: [CommonModule],
-  exports: [NavbarComponent, ProductosComponent, FormulariopagoComponent,FormularioRegistroComponent,CarritoComponent, ToasterComponent],
+  exports: [NavbarComponent, ProductosComponent, FormulariopagoComponent,FormularioRegistroComponent,CarritoComponent, ToasterComponent, FormularioRecuperarCuentaComponent],
 })
 export class ComponentsModule {}

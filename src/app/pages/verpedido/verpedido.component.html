@@ -3,5 +3,7 @@
 >
   <h2>Ver pedido</h2>
 </div>
-
+<div *ngIf="carrito.length <= 0" class="carrito-vacio">
+  <span>No tenes productos en el carrito</span>
+</div>
 <app-carrito></app-carrito>
