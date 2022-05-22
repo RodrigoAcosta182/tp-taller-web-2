@@ -15,7 +15,6 @@ export class ProductosComponent implements OnInit {
   ngOnInit(): void {}
 
   agregarProducto(producto: any) {
-    //aca llenar una segunda lista, carrito. En el Checkout vamos a acceder a esta lista de productos seleccionados
     const productoYaSeleccionado = this.carrito.filter(
       (item) => item.id === producto.id
     );
