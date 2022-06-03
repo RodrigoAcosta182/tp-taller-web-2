@@ -7,12 +7,33 @@ import { FormularioRegistroComponent } from './formulario-registro/formulario-re
 import { CarritoComponent } from './carrito/carrito.component';
 import { ToasterComponent } from './toaster/toaster.component';
 import { FormularioRecuperarCuentaComponent } from './formulario-recuperar-cuenta/formulario-recuperar-cuenta.component';
+import { FormularioCambioPasswordComponent } from './formulario-cambio-password/formulario-cambio-password.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 // en exports voy agregando los componentes
 
 @NgModule({
-  declarations: [NavbarComponent, ProductosComponent, FormulariopagoComponent, FormularioRegistroComponent, CarritoComponent, ToasterComponent, FormularioRecuperarCuentaComponent],
-  imports: [CommonModule],
-  exports: [NavbarComponent, ProductosComponent, FormulariopagoComponent,FormularioRegistroComponent,CarritoComponent, ToasterComponent, FormularioRecuperarCuentaComponent],
+  declarations: [
+    NavbarComponent,
+    ProductosComponent,
+    FormulariopagoComponent,
+    FormularioRegistroComponent,
+    CarritoComponent,
+    ToasterComponent,
+    FormularioRecuperarCuentaComponent,
+    FormularioCambioPasswordComponent,
+  ],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, BrowserModule],
+  exports: [
+    NavbarComponent,
+    ProductosComponent,
+    FormulariopagoComponent,
+    FormularioRegistroComponent,
+    CarritoComponent,
+    ToasterComponent,
+    FormularioRecuperarCuentaComponent,
+    FormularioCambioPasswordComponent
+  ],
 })
 export class ComponentsModule {}
