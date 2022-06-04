@@ -1,5 +1,6 @@
 var nodemailer = require("nodemailer");
 var express = require("express");
+
 var app = express();
 
 app.post("/send-email",(req,res) => {
@@ -17,7 +18,7 @@ app.post("/send-email",(req,res) => {
         from: "Remitente",
         to: "jracosta1991@gmail.com",
         subject: "Enviado desde nodemailer",
-        text: "hola tu hermana"
+        text: "Esto es un mail de prueba de Node.js"
     }
 
     transporter.sendMail(mailOptions, (error, info) => {
