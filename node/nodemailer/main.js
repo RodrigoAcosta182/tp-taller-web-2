@@ -31,6 +31,7 @@ app.post("/send-email",(req,res) => {
     });
 });
 
+//escuchando un puerto en particular
 app.listen(3000, () => {
     console.log("Servidor en -> http://localhost:3000");
 });
