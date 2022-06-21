@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
-import { ILogin } from '../../models/login.interface';
-import { IResponse } from '../../models/response.interface';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
+  constructor(private http: HttpClient) {}
 
+  public get(url: string) {
+    return this.http.get(url);
+  }
 
-  constructor( private http:HttpClient) { }
+  public post(url: string, body: any) {
+    return this.http.post(url, body);
+  }
 }

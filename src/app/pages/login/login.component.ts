@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { ApiService } from 'src/app/services/api/api.service';
 
 @Component({
   selector: 'app-login',
@@ -19,12 +20,15 @@ export class LoginComponent implements OnInit {
   formGroup!: FormGroup;
   usuario!: String;
   password!: String;
+  authToken!: any;
   recordardatos!: Boolean;
+  loading!: Boolean;
+  
 
   constructor(
     protected router: Router,
     private formBuilder: FormBuilder,
-    protected httpClient: HttpClient
+    private apiService: ApiService
   ) {}
 
   ngOnInit(): void {
@@ -39,21 +43,31 @@ export class LoginComponent implements OnInit {
     this.usuario = this.formGroup.get('usuario')?.value;
     this.password = this.formGroup.get('password')?.value;
     this.recordardatos = this.formGroup.get('recordardatos')?.value;
-    if (this.usuario != '' && this.password != "") {
-      console.log(this.usuario);
-      console.log(this.password);
-      console.log(this.recordardatos);
-      //Aca tendria que buscar la manera de validar los datos antes de hacer el navigate
-      this.router.navigate(["/home"])
+    if (this.usuario != '' && this.password != '') {
+      // console.log(this.usuario);
+      // console.log(this.password);
+      // console.log('recordardatos' + this.recordardatos);
+      const usuarioDto = {
+        email: this.usuario,
+        password: this.password,
+      };
+      this.apiService
+        .post('http://localhost:3000/login-usuario', usuarioDto)
+        .subscribe((respuesta) => {
+          if (respuesta !== null && respuesta !== undefined) {
+            this.authToken = respuesta
+            this.router.navigate(["/home"])
+          }
+        });
     } else {
-      console.log("los campos usuario o password no pueden estar vacios");
+      alert('los campos usuario o password no pueden estar vacios');
     }
   }
 
-  irARegistro(){
-    this.router.navigate(["/signup"])
+  irARegistro() {
+    this.router.navigate(['/signup']);
   }
-  irARecuperarCuenta(){
-    this.router.navigate(["/recuperarcuenta"])
+  irARecuperarCuenta() {
+    this.router.navigate(['/recuperarcuenta']);
   }
 }
