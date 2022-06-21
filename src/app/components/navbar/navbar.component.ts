@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 import { carritoProductos } from '../carrito/carritoProductos';
 
 @Component({
@@ -11,6 +12,7 @@ export class NavbarComponent implements OnInit {
   carrito = carritoProductos
   constructor(
     protected router: Router,
+    private cookieService: CookieService
   ) {}
 
   ngOnInit(): void {
@@ -21,6 +23,11 @@ export class NavbarComponent implements OnInit {
   }
   irAHome(){
     this.router.navigate(["/home"])
+  }
+  
+  Logout(){
+    this.cookieService.delete("token_access")
+    this.router.navigate(["/"])
   }
 }
 
