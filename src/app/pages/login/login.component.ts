@@ -8,6 +8,7 @@ import {
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ApiService } from 'src/app/services/api/api.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login',
@@ -28,7 +29,8 @@ export class LoginComponent implements OnInit {
   constructor(
     protected router: Router,
     private formBuilder: FormBuilder,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private cookieService: CookieService
   ) {}
 
   ngOnInit(): void {
@@ -56,6 +58,7 @@ export class LoginComponent implements OnInit {
         .subscribe((respuesta) => {
           if (respuesta !== null && respuesta !== undefined) {
             this.authToken = respuesta
+            this.cookieService.set("token_access", this.authToken,4,"/")
             this.router.navigate(["/home"])
           }
         });
