@@ -2,7 +2,7 @@ export interface IProducto {
   id: number;
   nombre: string;
   detalles: string;
-  precio: string;
+  precio: number;
   cantidadSesiones: string;
   imagen: string;
 }

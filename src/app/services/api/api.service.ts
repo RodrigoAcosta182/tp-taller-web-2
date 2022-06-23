@@ -5,13 +5,17 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ApiService {
-  constructor(private http: HttpClient) {}
+  baseUrl!: String;
+
+  constructor(private http: HttpClient) {
+    this.baseUrl = 'http://localhost:3000';
+  }
 
   public get(url: string) {
     return this.http.get(url);
   }
 
   public post(url: string, body: any) {
-    return this.http.post(url, body);
+    return this.http.post(this.baseUrl + url, body);
   }
 }

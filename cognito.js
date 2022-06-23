@@ -2,10 +2,12 @@ const AmazonCognitoIdentity = require("amazon-cognito-identity-js");
 global.fetch = require("node-fetch");
 var express = require("express");
 var app = express();
-app.use(express.json());
 const cors = require("cors");
 const port = 3000;
 
+
+//config de app
+app.use(express.json());
 app.use(
   cors({
     origin: "http://localhost:4200",

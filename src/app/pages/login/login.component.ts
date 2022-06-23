@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
         password: this.password,
       };
       this.apiService
-        .post('http://localhost:3000/login-usuario', usuarioDto)
+        .post('/login-usuario', usuarioDto)
         .subscribe((respuesta) => {
           if (respuesta !== null && respuesta !== undefined) {
             this.authToken = respuesta

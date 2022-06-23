@@ -13,9 +13,16 @@
           alt="..."
           style="width: 150px"
         />
-        <div class="cardCarritoDetallesProducto">
+        <div [formGroup]="formGroup" class="cardCarritoDetallesProducto">
           <h5 class="mb-1">{{ producto.nombre }}</h5>
-          <p class="mb-1">Precio por sesion: $ {{ producto.precio }}</p>
+          <p class="mb-1">Precio por sesion: $ {{ producto.precio}}</p>
+          <div>
+            <span style="margin-right: 8px">cantidad de sesiones:</span>
+            <select formControlName="cantidadSesionesForm" (change)="onChangeSesiones($event)" style="width: 40px">
+              <option *ngFor="let number of cantidadSesiones">{{number}}</option>
+          
+            </select>
+          </div>
           <small class="text-muted">{{ producto.detalles }}</small>
         </div>
       </div>

@@ -54,7 +54,7 @@ export class FormularioRegistroComponent implements OnInit {
         direccion: this.direccion,
       };
       this.apiService
-        .post('http://localhost:3000/registrar-usuario', usuarioDto)
+        .post('/registrar-usuario', usuarioDto)
         .subscribe((respuesta) => {
           console.log('usuario registrado');
           this.router.navigate(['/login']);
