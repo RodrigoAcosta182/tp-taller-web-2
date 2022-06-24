@@ -17,7 +17,7 @@ export class CarritoComponent implements OnInit {
   precioFinalProducto!: Number;
   carrito = carritoProductos;
   cantidadSesiones: any = [1, 2, 3, 4, 5, 6];
-  cantidadSeleccionada : any = 1
+  cantidadSeleccionada: number = 1;
   constructor(protected router: Router, private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
@@ -30,8 +30,15 @@ export class CarritoComponent implements OnInit {
     this.carrito.splice(idproducto, 1);
   }
 
-  onChangeSesiones(e: any) {
-    
-    this.cantidadSeleccionada = e.target.value 
+  onChangeSesiones(e: any, producto: any) {
+    this.cantidadSeleccionada = e.target.value;
+    this.actualizarSesiones(producto.id, this.cantidadSeleccionada);
+  }
+
+  actualizarSesiones(id: any, valor: number) {
+    const elementoEncontrado = this.carrito.findIndex((elemento) => {
+      return elemento.id == id;
+    });
+    this.carrito[elementoEncontrado]['cantidadSesiones'] = valor;
   }
 }

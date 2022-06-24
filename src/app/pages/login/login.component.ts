@@ -42,6 +42,7 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
+    this.loading = true
     this.usuario = this.formGroup.get('usuario')?.value;
     this.password = this.formGroup.get('password')?.value;
     this.recordardatos = this.formGroup.get('recordardatos')?.value;
@@ -57,6 +58,7 @@ export class LoginComponent implements OnInit {
         .post('/login-usuario', usuarioDto)
         .subscribe((respuesta) => {
           if (respuesta !== null && respuesta !== undefined) {
+            this.loading = false
             this.authToken = respuesta
             this.cookieService.set("token_access", this.authToken,4,"/")
             this.router.navigate(["/home"])
@@ -64,6 +66,7 @@ export class LoginComponent implements OnInit {
         });
     } else {
       alert('los campos usuario o password no pueden estar vacios');
+      this.loading = false
     }
   }
 

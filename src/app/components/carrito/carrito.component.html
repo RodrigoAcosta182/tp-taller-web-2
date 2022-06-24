@@ -18,9 +18,8 @@
           <p class="mb-1">Precio por sesion: $ {{ producto.precio}}</p>
           <div>
             <span style="margin-right: 8px">cantidad de sesiones:</span>
-            <select formControlName="cantidadSesionesForm" (change)="onChangeSesiones($event)" style="width: 40px">
+            <select formControlName="cantidadSesionesForm" (change)="onChangeSesiones($event, producto)" style="width: 40px">
               <option *ngFor="let number of cantidadSesiones">{{number}}</option>
-          
             </select>
           </div>
           <small class="text-muted">{{ producto.detalles }}</small>
