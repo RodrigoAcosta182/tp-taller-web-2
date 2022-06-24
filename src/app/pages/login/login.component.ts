@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
   authToken!: any;
   recordardatos!: Boolean;
   loading!: Boolean;
+  isLogged!: Boolean;
   
 
   constructor(
@@ -34,6 +35,10 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.isLogged = this.cookieService.check("token_access")
+    if(this.isLogged){
+      this.router.navigate(["/home"])
+    }
     this.formGroup = this.formBuilder.group({
       usuario: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required),
@@ -47,9 +52,6 @@ export class LoginComponent implements OnInit {
     this.password = this.formGroup.get('password')?.value;
     this.recordardatos = this.formGroup.get('recordardatos')?.value;
     if (this.usuario != '' && this.password != '') {
-      // console.log(this.usuario);
-      // console.log(this.password);
-      // console.log('recordardatos' + this.recordardatos);
       const usuarioDto = {
         email: this.usuario,
         password: this.password,
