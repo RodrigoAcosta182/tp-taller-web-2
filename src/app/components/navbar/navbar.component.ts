@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { carritoProductos } from '../carrito/carritoProductos';
@@ -8,7 +8,8 @@ import { carritoProductos } from '../carrito/carritoProductos';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, DoCheck {
+  isLogged!: Boolean
   carrito = carritoProductos
   constructor(
     protected router: Router,
@@ -16,6 +17,10 @@ export class NavbarComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+  }
+
+  ngDoCheck(): void {
+    this.isLogged = this.cookieService.check("token_access")
   }
 
   irAVerPedido(){
