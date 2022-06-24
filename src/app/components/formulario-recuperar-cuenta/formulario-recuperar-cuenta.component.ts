@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-recuperar-cuenta',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioRecuperarCuentaComponent implements OnInit {
 
-  constructor() { }
+  constructor( protected router : Router) { }
 
   ngOnInit(): void {
+  }
+
+  volverAlLogin(){
+    this.router.navigate(["/login"])
   }
 
 }

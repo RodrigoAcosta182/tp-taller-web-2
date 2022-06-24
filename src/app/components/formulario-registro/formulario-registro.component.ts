@@ -63,4 +63,8 @@ export class FormularioRegistroComponent implements OnInit {
       console.log ("Los campos no pueden estar vacios");
     }
   }
+  
+  volverAlLogin(){
+    this.router.navigate(["/login"])
+  }
 }
