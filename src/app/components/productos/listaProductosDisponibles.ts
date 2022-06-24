@@ -6,7 +6,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Barba',
     detalles: 'productDetail1',
     precio: 100,
-    cantidadSesiones: 'productDetail1',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/01.jpg"
   },
   {
@@ -14,7 +14,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Genitales',
     detalles: 'productDetail2',
     precio: 100,
-    cantidadSesiones: 'productDetail2',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/02.jpg"
   },
   {
@@ -22,7 +22,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Abdomen',
     detalles: 'productDetail3',
     precio: 100,
-    cantidadSesiones: 'productDetail3',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/03.jpg"
   },
   {
@@ -30,7 +30,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Antebrazos',
     detalles: 'productDetail4',
     precio: 100,
-    cantidadSesiones: 'productDetail4',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/04.jpg"
   },
   {
@@ -38,7 +38,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Areolas',
     detalles: 'productDetail1',
     precio: 100,
-    cantidadSesiones: 'productDetail1',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/05.jpg"
   },
   {
@@ -46,7 +46,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Axila',
     detalles: 'productDetail2',
     precio: 100,
-    cantidadSesiones: 'productDetail2',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/06.jpg"
   },
   {
@@ -54,7 +54,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Bozo/Bigote',
     detalles: 'productDetail3',
     precio: 100,
-    cantidadSesiones: 'productDetail3',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/07.jpg"
   },
   {
@@ -62,7 +62,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Brazos completos',
     detalles: 'productDetail4',
     precio: 100,
-    cantidadSesiones: 'productDetail4',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/08.jpg"
   },
   {
@@ -70,7 +70,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Cavado extendido',
     detalles: 'productDetail1',
     precio: 100,
-    cantidadSesiones: 'productDetail1',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/09.jpg"
   },
   {
@@ -78,7 +78,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Cuello interior',
     detalles: 'productDetail2',
     precio: 100,
-    cantidadSesiones: 'productDetail2',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/10.jpg"
   },
   {
@@ -86,7 +86,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Cuello posterior',
     detalles: 'productDetail3',
     precio: 100,
-    cantidadSesiones: 'productDetail3',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/11.jpg"
   },
   {
@@ -94,7 +94,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Escote',
     detalles: 'productDetail4',
     precio: 100,
-    cantidadSesiones: 'productDetail4',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/12.jpg"
   },
   {
@@ -102,7 +102,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Espalda completa',
     detalles: 'productDetail1',
     precio: 100,
-    cantidadSesiones: 'productDetail1',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/13.jpg"
   },
   {
@@ -110,7 +110,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Espalda superior',
     detalles: 'productDetail2',
     precio: 100,
-    cantidadSesiones: 'productDetail2',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/14.jpg"
   },
   {
@@ -118,7 +118,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Espalda media',
     detalles: 'productDetail3',
     precio: 100,
-    cantidadSesiones: 'productDetail3',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/15.jpg"
   },
   {
@@ -126,7 +126,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Espalda inferior',
     detalles: 'productDetail4',
     precio: 100,
-    cantidadSesiones: 'productDetail4',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/16.jpg"
   },
   {
@@ -134,7 +134,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Gluteos',
     detalles: 'productDetail1',
     precio: 100,
-    cantidadSesiones: 'productDetail1',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/17.jpg"
   },
   {
@@ -142,7 +142,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Hombros',
     detalles: 'productDetail2',
     precio: 100,
-    cantidadSesiones: 'productDetail2',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/18.jpg"
   },
   {
@@ -150,7 +150,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Linea alba',
     detalles: 'productDetail3',
     precio: 100,
-    cantidadSesiones: 'productDetail3',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/19.jpg"
   },
   {
@@ -158,7 +158,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Manos',
     detalles: 'productDetail4',
     precio: 100,
-    cantidadSesiones: 'productDetail4',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/20.jpg"
   },
   {
@@ -166,7 +166,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Media pierna',
     detalles: 'productDetail1',
     precio: 100,
-    cantidadSesiones: 'productDetail1',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/21.jpg"
   },
   {
@@ -174,7 +174,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Menton',
     detalles: 'productDetail2',
     precio: 100,
-    cantidadSesiones: 'productDetail2',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/22.jpg"
   },
   {
@@ -182,7 +182,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Muslos',
     detalles: 'productDetail3',
     precio: 100,
-    cantidadSesiones: 'productDetail3',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/23.jpg"
   },
   {
@@ -190,7 +190,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Muslos anterior',
     detalles: 'productDetail4',
     precio: 100,
-    cantidadSesiones: 'productDetail4',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/24.jpg"
   },
   {
@@ -198,7 +198,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Muslos posterior',
     detalles: 'productDetail1',
     precio: 100,
-    cantidadSesiones: 'productDetail1',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/25.jpg"
   },
   {
@@ -206,7 +206,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Patillas',
     detalles: 'productDetail2',
     precio: 100,
-    cantidadSesiones: 'productDetail2',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/26.jpg"
   },
   {
@@ -214,7 +214,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Pierna entera',
     detalles: 'productDetail3',
     precio: 100,
-    cantidadSesiones: 'productDetail3',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/27.jpg"
   },
   {
@@ -222,7 +222,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Pies',
     detalles: 'productDetail4',
     precio: 100,
-    cantidadSesiones: 'productDetail4',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/28.jpg"
   },
   {
@@ -230,7 +230,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Rosto completo',
     detalles: 'productDetail1',
     precio: 100,
-    cantidadSesiones: 'productDetail1',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/29.jpg"
   },
   {
@@ -238,7 +238,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Submenton',
     detalles: 'productDetail2',
     precio: 100,
-    cantidadSesiones: 'productDetail2',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/30.jpg"
   },
   {
@@ -246,7 +246,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Tira de cola',
     detalles: 'productDetail3',
     precio: 100,
-    cantidadSesiones: 'productDetail3',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/31.jpg"
   },
   {
@@ -254,7 +254,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Pabellon auricular',
     detalles: 'productDetail4',
     precio: 100,
-    cantidadSesiones: 'productDetail4',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/32.jpg"
   },
   {
@@ -262,7 +262,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Nariz',
     detalles: 'productDetail4',
     precio: 100,
-    cantidadSesiones: 'productDetail4',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/33.jpg"
   },
   {
@@ -270,7 +270,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Entrecejo',
     detalles: 'productDetail1',
     precio: 100,
-    cantidadSesiones: 'productDetail1',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/34.jpg"
   },
   {
@@ -278,7 +278,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Rodillas',
     detalles: 'productDetail2',
     precio: 100,
-    cantidadSesiones: 'productDetail2',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/35.jpg"
   },
   {
@@ -286,7 +286,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Muslos interno',
     detalles: 'productDetail3',
     precio: 100,
-    cantidadSesiones: 'productDetail3',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/36.jpg"
   },
   {
@@ -294,7 +294,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Frente',
     detalles: 'productDetail4',
     precio: 100,
-    cantidadSesiones: 'productDetail4',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/37.jpg"
   },
   {
@@ -302,7 +302,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Medio gluteo',
     detalles: 'productDetail1',
     precio: 100,
-    cantidadSesiones: 'productDetail1',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/38.jpg"
   },
   {
@@ -310,7 +310,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Brazo superior',
     detalles: 'productDetail2',
     precio: 100,
-    cantidadSesiones: 'productDetail2',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/39.jpg"
   },
   {
@@ -318,7 +318,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Torax',
     detalles: 'productDetail3',
     precio: 100,
-    cantidadSesiones: 'productDetail3',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/40.jpg"
   },
   {
@@ -326,7 +326,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Pomulos',
     detalles: 'productDetail4',
     precio: 100,
-    cantidadSesiones: 'productDetail4',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/41.jpg"
   },
   {
@@ -334,7 +334,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Cabeza',
     detalles: 'productDetail1',
     precio: 100,
-    cantidadSesiones: 'productDetail1',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/42.jpg"
   },
   {
@@ -342,7 +342,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Labios mujer',
     detalles: 'productDetail2',
     precio: 100,
-    cantidadSesiones: 'productDetail2',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/43.jpg"
   },
   {
@@ -350,7 +350,7 @@ export const listaProductosDisponibles : IProducto[] = [
     nombre: 'Boxer',
     detalles: 'productDetail3',
     precio: 100,
-    cantidadSesiones: 'productDetail3',
+    cantidadSesiones: 1,
     imagen: "../../../assets/images/44.jpg"
   },
 ];

@@ -4,6 +4,15 @@
   <h2>Ver pedido</h2>
 </div>
 <div *ngIf="carrito.length <= 0" class="carrito-vacio">
-  <span>No tenes productos en el carrito</span>
+  <h3>No tenes productos en el carrito</h3>
+  <img
+    src="../../../assets/images/noProductos.png"
+    class="card-img-top"
+    alt="..."
+    style="width: 100px"
+  />
 </div>
-<app-carrito></app-carrito>
+<div *ngIf="carrito.length > 0" class="verPedido-body">
+  <app-carrito></app-carrito>
+  <app-checkpedido></app-checkpedido>
+</div>

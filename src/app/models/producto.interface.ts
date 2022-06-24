@@ -3,6 +3,6 @@ export interface IProducto {
   nombre: string;
   detalles: string;
   precio: number;
-  cantidadSesiones: string;
+  cantidadSesiones: number;
   imagen: string;
 }
