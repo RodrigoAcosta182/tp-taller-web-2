@@ -25,6 +25,8 @@ export class LoginComponent implements OnInit {
   recordardatos!: Boolean;
   loading!: Boolean;
   isLogged!: Boolean;
+  errorStr!: String;
+  error!: Boolean;
   
 
   constructor(
@@ -64,8 +66,14 @@ export class LoginComponent implements OnInit {
             this.authToken = respuesta
             this.cookieService.set("token_access", this.authToken,4,"/")
             this.router.navigate(["/home"])
+            this.error = false
           }
-        });
+        }, err => {
+          500
+          this.error = true
+          this.loading = false
+          this.errorStr = err.error
+      });
     } else {
       alert('los campos usuario o password no pueden estar vacios');
       this.loading = false
