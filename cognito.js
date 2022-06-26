@@ -5,7 +5,6 @@ var app = express();
 const cors = require("cors");
 const port = 3000;
 
-
 //config de app
 app.use(express.json());
 app.use(
@@ -22,6 +21,7 @@ const poolData = {
 const userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
 
 app.post("/login-usuario", (req, res) => {
+  //validar req
   var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails({
     Username: req.body.email,
     Password: req.body.password,
@@ -41,14 +41,18 @@ app.post("/login-usuario", (req, res) => {
       res.status(200).jsonp(result.getAccessToken().getJwtToken());
     },
     onFailure: function (err) {
-      console.log(err);
-      res.status(500).send(err.message);
-      return err
+      const error = {
+        message: err.message,
+        code: err.code,
+      };
+      console.log(error);
+      res.status(500).send(error);
     },
   });
 });
 
 app.post("/registrar-usuario", (req, res) => {
+  //validar req
   var attributeList = [];
   attributeList.push(
     new AmazonCognitoIdentity.CognitoUserAttribute({
@@ -76,6 +80,29 @@ app.post("/registrar-usuario", (req, res) => {
       cognitoUser = result.user;
       res.status(200).jsonp(req.body);
       console.log("user name is " + cognitoUser.getUsername());
+    }
+  );
+});
+
+app.post("/confirmar-usuario", (req, res) => {
+  const { Username, ConfirmationCode } = req.body;
+  //agregar validaciones
+  // if(Username !== undefined && ConfirmationCode !== undefined){}
+
+  var userData = {
+    Username: Username,
+    Pool: userPool,
+  };
+  var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
+  cognitoUser.confirmRegistration(
+    ConfirmationCode,
+    true,
+    function (err, result) {
+      if (err) {
+        res.status(500).send(err);
+        return;
+      }
+      res.status(200).jsonp(result);
     }
   );
 });

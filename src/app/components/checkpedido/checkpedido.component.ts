@@ -12,6 +12,7 @@ export class CheckpedidoComponent implements OnInit, DoCheck {
   constructor() { }
 
   ngOnInit(): void {
+    //reset las sesiones cuando entro al carrito
     this.carrito.forEach(producto =>{
       producto.cantidadSesiones = 1
     })
