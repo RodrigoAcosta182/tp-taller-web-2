@@ -73,7 +73,7 @@ export class LoginComponent implements OnInit {
           if (err.error.code != 'UserNotConfirmedException') {
             alert(err.error.code);
           } else {
-            alert(err.error.code);
+            this.router.navigate(['/confirmarusuario']);
           }
           this.errorStr = err.error.message;
         }
@@ -90,9 +90,5 @@ export class LoginComponent implements OnInit {
   irARecuperarCuenta() {
     this.router.navigate(['/recuperarcuenta']);
   }
-
-
-
-
 
 }

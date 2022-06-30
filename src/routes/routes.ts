@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { VigilanteGuard } from 'src/app/guard/vigilante.guard';
 import { CambiarpasswordComponent } from 'src/app/pages/cambiarpassword/cambiarpassword.component';
 import { CheckoutComponent } from 'src/app/pages/checkout/checkout.component';
+import { ConfirmarusuarioComponent } from 'src/app/pages/confirmarusuario/confirmarusuario.component';
 import { HomeComponent } from 'src/app/pages/home/home.component';
 
 import { LoginComponent } from 'src/app/pages/login/login.component';
@@ -16,6 +17,7 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'recuperarcuenta', component: RecuperarcuentaComponent },
+  { path: 'confirmarusuario', component: ConfirmarusuarioComponent },
   { path: 'verpedido', component: VerpedidoComponent, canActivate: [VigilanteGuard] },
   { path: '**', pathMatch: 'full', redirectTo: 'login' },
 ];

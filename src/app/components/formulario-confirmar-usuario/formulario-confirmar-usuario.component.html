@@ -1,0 +1,30 @@
+<form
+  [formGroup]="formGroup"
+  (ngSubmit)="activarCuenta()"
+  class="formularioRecuperarCuenta"
+>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"
+      >Codigo de confirmacion</label
+    >
+    <input
+      formControlName="codigoConfirmacion"
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="55554444"
+    />
+  </div>
+
+  <div class="mb-3">
+    <input class="w-100 btn btn-lg btn-success" value="Activar Cuenta" type="submit" />
+    
+  </div>
+  <div class="mb-3">
+    <input
+      class="w-100 btn btn-lg btn-primary"
+      value="Volver"
+      (click)="volverAlLogin()"
+    />
+  </div>
+</form>
