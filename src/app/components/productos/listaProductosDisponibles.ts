@@ -7,7 +7,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail1',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/01.jpg"
+    imagen: "../../../assets/images/01.jpg",
+    estado: false
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail2',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/02.jpg"
+    imagen: "../../../assets/images/02.jpg",
+    estado: false
   },
   {
     id: 3,
@@ -23,7 +25,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail3',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/03.jpg"
+    imagen: "../../../assets/images/03.jpg",
+    estado: false
   },
   {
     id: 4,
@@ -31,7 +34,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail4',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/04.jpg"
+    imagen: "../../../assets/images/04.jpg",
+    estado: false
   },
   {
     id: 5,
@@ -39,7 +43,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail1',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/05.jpg"
+    imagen: "../../../assets/images/05.jpg",
+    estado: false
   },
   {
     id: 6,
@@ -47,7 +52,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail2',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/06.jpg"
+    imagen: "../../../assets/images/06.jpg",
+    estado: false
   },
   {
     id: 7,
@@ -55,7 +61,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail3',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/07.jpg"
+    imagen: "../../../assets/images/07.jpg",
+    estado: false
   },
   {
     id: 8,
@@ -63,7 +70,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail4',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/08.jpg"
+    imagen: "../../../assets/images/08.jpg",
+    estado: false
   },
   {
     id: 9,
@@ -71,7 +79,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail1',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/09.jpg"
+    imagen: "../../../assets/images/09.jpg",
+    estado: false
   },
   {
     id: 10,
@@ -79,7 +88,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail2',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/10.jpg"
+    imagen: "../../../assets/images/10.jpg",
+    estado: false
   },
   {
     id: 11,
@@ -87,7 +97,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail3',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/11.jpg"
+    imagen: "../../../assets/images/11.jpg",
+    estado: false
   },
   {
     id: 12,
@@ -95,7 +106,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail4',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/12.jpg"
+    imagen: "../../../assets/images/12.jpg",
+    estado: false
   },
   {
     id: 13,
@@ -103,7 +115,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail1',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/13.jpg"
+    imagen: "../../../assets/images/13.jpg",
+    estado: false
   },
   {
     id: 14,
@@ -111,7 +124,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail2',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/14.jpg"
+    imagen: "../../../assets/images/14.jpg",
+    estado: false
   },
   {
     id: 15,
@@ -119,7 +133,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail3',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/15.jpg"
+    imagen: "../../../assets/images/15.jpg",
+    estado: false
   },
   {
     id: 16,
@@ -127,7 +142,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail4',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/16.jpg"
+    imagen: "../../../assets/images/16.jpg",
+    estado: false
   },
   {
     id: 17,
@@ -135,7 +151,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail1',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/17.jpg"
+    imagen: "../../../assets/images/17.jpg",
+    estado: false
   },
   {
     id: 18,
@@ -143,7 +160,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail2',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/18.jpg"
+    imagen: "../../../assets/images/18.jpg",
+    estado: false
   },
   {
     id: 19,
@@ -151,7 +169,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail3',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/19.jpg"
+    imagen: "../../../assets/images/19.jpg",
+    estado: false
   },
   {
     id: 20,
@@ -159,7 +178,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail4',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/20.jpg"
+    imagen: "../../../assets/images/20.jpg",
+    estado: false
   },
   {
     id: 21,
@@ -167,7 +187,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail1',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/21.jpg"
+    imagen: "../../../assets/images/21.jpg",
+    estado: false
   },
   {
     id: 22,
@@ -175,7 +196,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail2',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/22.jpg"
+    imagen: "../../../assets/images/22.jpg",
+    estado: false
   },
   {
     id: 23,
@@ -183,7 +205,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail3',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/23.jpg"
+    imagen: "../../../assets/images/23.jpg",
+    estado: false
   },
   {
     id: 24,
@@ -191,7 +214,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail4',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/24.jpg"
+    imagen: "../../../assets/images/24.jpg",
+    estado: false
   },
   {
     id: 25,
@@ -199,7 +223,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail1',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/25.jpg"
+    imagen: "../../../assets/images/25.jpg",
+    estado: false
   },
   {
     id: 26,
@@ -207,7 +232,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail2',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/26.jpg"
+    imagen: "../../../assets/images/26.jpg",
+    estado: false
   },
   {
     id: 27,
@@ -215,7 +241,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail3',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/27.jpg"
+    imagen: "../../../assets/images/27.jpg",
+    estado: false
   },
   {
     id: 28,
@@ -223,7 +250,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail4',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/28.jpg"
+    imagen: "../../../assets/images/28.jpg",
+    estado: false
   },
   {
     id: 29,
@@ -231,7 +259,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail1',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/29.jpg"
+    imagen: "../../../assets/images/29.jpg",
+    estado: false
   },
   {
     id: 30,
@@ -239,7 +268,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail2',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/30.jpg"
+    imagen: "../../../assets/images/30.jpg",
+    estado: false
   },
   {
     id: 31,
@@ -247,7 +277,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail3',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/31.jpg"
+    imagen: "../../../assets/images/31.jpg",
+    estado: false
   },
   {
     id: 32,
@@ -255,7 +286,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail4',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/32.jpg"
+    imagen: "../../../assets/images/32.jpg",
+    estado: false
   },
   {
     id: 33,
@@ -263,7 +295,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail4',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/33.jpg"
+    imagen: "../../../assets/images/33.jpg",
+    estado: false
   },
   {
     id: 34,
@@ -271,7 +304,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail1',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/34.jpg"
+    imagen: "../../../assets/images/34.jpg",
+    estado: false
   },
   {
     id: 35,
@@ -279,7 +313,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail2',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/35.jpg"
+    imagen: "../../../assets/images/35.jpg",
+    estado: false
   },
   {
     id: 36,
@@ -287,7 +322,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail3',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/36.jpg"
+    imagen: "../../../assets/images/36.jpg",
+    estado: false
   },
   {
     id: 37,
@@ -295,7 +331,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail4',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/37.jpg"
+    imagen: "../../../assets/images/37.jpg",
+    estado: false
   },
   {
     id: 38,
@@ -303,7 +340,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail1',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/38.jpg"
+    imagen: "../../../assets/images/38.jpg",
+    estado: false
   },
   {
     id: 39,
@@ -311,7 +349,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail2',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/39.jpg"
+    imagen: "../../../assets/images/39.jpg",
+    estado: false
   },
   {
     id: 40,
@@ -319,7 +358,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail3',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/40.jpg"
+    imagen: "../../../assets/images/40.jpg",
+    estado: false
   },
   {
     id: 41,
@@ -327,7 +367,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail4',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/41.jpg"
+    imagen: "../../../assets/images/41.jpg",
+    estado: false
   },
   {
     id: 42,
@@ -335,7 +376,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail1',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/42.jpg"
+    imagen: "../../../assets/images/42.jpg",
+    estado: false
   },
   {
     id: 43,
@@ -343,7 +385,8 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail2',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/43.jpg"
+    imagen: "../../../assets/images/43.jpg",
+    estado: false
   },
   {
     id: 44,
@@ -351,6 +394,7 @@ export const listaProductosDisponibles : IProducto[] = [
     detalles: 'productDetail3',
     precio: 100,
     cantidadSesiones: 1,
-    imagen: "../../../assets/images/44.jpg"
+    imagen: "../../../assets/images/44.jpg",
+    estado: false
   },
 ];

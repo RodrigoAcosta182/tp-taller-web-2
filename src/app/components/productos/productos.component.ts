@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { carritoProductos } from '../carrito/carritoProductos';
 import { listaProductosDisponibles } from './listaProductosDisponibles';
 
@@ -7,23 +7,33 @@ import { listaProductosDisponibles } from './listaProductosDisponibles';
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.css'],
 })
-export class ProductosComponent implements OnInit {
+export class ProductosComponent implements OnInit, DoCheck {
   productos = listaProductosDisponibles;
   carrito = carritoProductos;
+
   constructor() {}
 
   ngOnInit(): void {}
 
+  ngDoCheck(): void {
+    this.productos.forEach((key: any, val: any) => {
+      const busq = this.carrito.find(x => x.id == this.productos[val].id);
+      if (busq) {
+        this.productos[val].estado = true;
+      }else{
+        this.productos[val].estado = false;
+      }
+    });
+  }
+
   agregarProducto(producto: any) {
     const productoYaSeleccionado = this.carrito.filter(
       (item) => item.id === producto.id
-    );
+    );  
     if (productoYaSeleccionado.length > 0) {
-      console.log('Este producto ya se encuentra en el carrito');
+      // productoYaSeleccionado[0].estado = true
     } else {
       carritoProductos.push(producto);
     }
   }
-
-  
 }

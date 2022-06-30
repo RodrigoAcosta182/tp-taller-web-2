@@ -15,8 +15,11 @@
       <p class="card-text">
         {{ producto.detalles }}
       </p>
-      <button (click)="agregarProducto(producto)" class="btn btn-primary">
+      <button *ngIf="!producto.estado" (click)="agregarProducto(producto)" class="btn btn-primary">
         Agregar al carrito
+      </button>
+      <button *ngIf="producto.estado" class="btn btn-success" disabled>
+        Agregado
       </button>
     </div>
   </div>
