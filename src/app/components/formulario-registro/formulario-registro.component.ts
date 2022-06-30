@@ -19,12 +19,22 @@ export class FormularioRegistroComponent implements OnInit {
   direccion!: String;
   email!: String;
   password!: String;
+  envio!: Boolean;
 
   constructor(
     protected router: Router,
     private formBuilder: FormBuilder,
     private apiService: ApiService
-  ) {}
+  ) {
+    this.formGroup = this.formBuilder.group({
+      name: ['', [Validators.required]],
+      company: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      age: ['', [Validators.required]],
+      url: ['', [Validators.required]],
+      password: ['', [Validators.required]],
+    });
+  }
 
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
@@ -61,8 +71,12 @@ export class FormularioRegistroComponent implements OnInit {
         });
     } else {
       console.log ("Los campos no pueden estar vacios");
+      this.envio = true
     }
+
   }
+  get name() {return this.formGroup.get('nombre'); }
+
   
   volverAlLogin(){
     this.router.navigate(["/login"])

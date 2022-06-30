@@ -9,6 +9,9 @@
         placeholder="Ej. Carlos"
         formControlName="nombre"
       />
+      <div *ngIf="formGroup.get('nombre')?.hasError('required') && envio">
+        <p style="color: red;">El nombre es requerido</p>
+      </div>
     </div>
     <div class="mb-3">
       <label for="exampleFormControlTextarea1" class="form-label"
@@ -21,6 +24,9 @@
         placeholder="Calle Falsa 123"
         formControlName="direccion"
       />
+      <div *ngIf="formGroup.get('direccion')?.hasError('required') && envio">
+        <p style="color: red;">La direccion es requerida</p>
+      </div>
     </div>
     <div class="mb-3">
       <label for="exampleFormControlTextarea1" class="form-label">Email</label>
@@ -31,6 +37,9 @@
         placeholder="name@unlam.com"
         formControlName="email"
       />
+      <div *ngIf="formGroup.get('email')?.hasError('required') && envio">
+        <p style="color: red;">El mail es requerido</p>
+      </div>
     </div>
   </div>
   <div class="formularioRegistro-columna2">
@@ -43,6 +52,9 @@
         placeholder="Password"
         formControlName="password"
       />
+      <div *ngIf="formGroup.get('password')?.hasError('required') && envio">
+        <p style="color: red;">La contraseña es requerida</p>
+      </div>
     </div>
   </div>
   <div class="mb-3">

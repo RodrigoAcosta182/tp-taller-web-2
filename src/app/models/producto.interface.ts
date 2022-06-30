@@ -5,4 +5,5 @@ export interface IProducto {
   precio: number;
   cantidadSesiones: number;
   imagen: string;
+  estado: boolean;
 }
