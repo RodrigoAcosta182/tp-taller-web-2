@@ -6,7 +6,6 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 import { ApiService } from 'src/app/services/api/api.service';
 import { CookieService } from 'ngx-cookie-service';
 
@@ -27,7 +26,6 @@ export class LoginComponent implements OnInit {
   isLogged!: Boolean;
   errorStr!: String;
   error!: Boolean;
-  
 
   constructor(
     protected router: Router,
@@ -37,9 +35,9 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.isLogged = this.cookieService.check("token_access")
-    if(this.isLogged){
-      this.router.navigate(["/home"])
+    this.isLogged = this.cookieService.check('token_access');
+    if (this.isLogged) {
+      this.router.navigate(['/home']);
     }
     this.formGroup = this.formBuilder.group({
       usuario: new FormControl('', Validators.required),
@@ -49,7 +47,7 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
-    this.loading = true
+    this.loading = true;
     this.usuario = this.formGroup.get('usuario')?.value;
     this.password = this.formGroup.get('password')?.value;
     this.recordardatos = this.formGroup.get('recordardatos')?.value;
@@ -58,25 +56,31 @@ export class LoginComponent implements OnInit {
         email: this.usuario,
         password: this.password,
       };
-      this.apiService
-        .post('/login-usuario', usuarioDto)
-        .subscribe((respuesta) => {
+      this.apiService.post('/login-usuario', usuarioDto).subscribe(
+        (respuesta) => {
           if (respuesta !== null && respuesta !== undefined) {
-            this.loading = false
-            this.authToken = respuesta
-            this.cookieService.set("token_access", this.authToken,4,"/")
-            this.router.navigate(["/home"])
-            this.error = false
+            this.loading = false;
+            this.authToken = respuesta;
+            this.cookieService.set('token_access', this.authToken, 4, '/');
+            this.router.navigate(['/home']);
+            this.error = false;
           }
-        }, err => {
-          500
-          this.error = true
-          this.loading = false
-          this.errorStr = err.error
-      });
+        },
+        (err) => {
+          500;
+          this.error = true;
+          this.loading = false;
+          if (err.error.code != 'UserNotConfirmedException') {
+            alert(err.error.code);
+          } else {
+            alert(err.error.code);
+          }
+          this.errorStr = err.error.message;
+        }
+      );
     } else {
       alert('los campos usuario o password no pueden estar vacios');
-      this.loading = false
+      this.loading = false;
     }
   }
 
@@ -86,4 +90,9 @@ export class LoginComponent implements OnInit {
   irARecuperarCuenta() {
     this.router.navigate(['/recuperarcuenta']);
   }
+
+
+
+
+
 }
