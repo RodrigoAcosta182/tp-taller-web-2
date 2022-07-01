@@ -8,6 +8,7 @@ import {
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api/api.service';
 import { CookieService } from 'ngx-cookie-service';
+import { cuentaConfirmar } from 'src/app/components/formulario-confirmar-usuario/cuentaConfirmar';
 
 @Component({
   selector: 'app-login',
@@ -74,6 +75,7 @@ export class LoginComponent implements OnInit {
             alert(err.error.code);
           } else {
             this.router.navigate(['/confirmarusuario']);
+            cuentaConfirmar.usuario = this.usuario;
           }
           this.errorStr = err.error.message;
         }

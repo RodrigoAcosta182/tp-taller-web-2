@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api/api.service';
+import { cuentaConfirmar } from './cuentaConfirmar';
 
 @Component({
   selector: 'app-formulario-confirmar-usuario',
@@ -31,27 +32,25 @@ export class FormularioConfirmarUsuarioComponent implements OnInit {
   activarCuenta() {
     this.codigoConfirmacion = this.formGroup.get('codigoConfirmacion')?.value;
     const dtoActivarCuenta = {
-      Username: this.email,
+      Username: cuentaConfirmar.usuario,
       ConfirmationCode: this.codigoConfirmacion,
     };
-    console.log(dtoActivarCuenta)
-    // this.apiService.post('/confirmar-usuario', dtoActivarCuenta).subscribe(
-    //   (respuesta) => {
-    //     if (respuesta !== null && respuesta !== undefined) {
-    //       this.loading = false;
-    //       this.router.navigate(['/home']);
-    //       this.error = false;
-    //     }
-    //   },
-    //   (err) => {
-    //     500;
-    //     this.error = true;
-    //     this.loading = false;
-    //     this.errorStr = err.error.message;
-    //   }
-    // );
+    this.apiService.post('/confirmar-usuario', dtoActivarCuenta).subscribe(
+      (respuesta) => {
+        if (respuesta !== null && respuesta !== undefined) {
+          this.loading = false;
+          this.router.navigate(['/home']);
+          this.error = false;
+        }
+      },
+      (err) => {
+        500;
+        this.error = true;
+        this.loading = false;
+        this.errorStr = err.error.message;
+      }
+    );
   }
-
   volverAlLogin() {
     this.router.navigate(['/login']);
   }

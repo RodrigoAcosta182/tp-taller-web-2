@@ -1,3 +1,3 @@
 export interface ICuentaConfirmar{
-    usuario: string;
+    usuario: String;
 }

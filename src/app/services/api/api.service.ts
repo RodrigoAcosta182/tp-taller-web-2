@@ -8,7 +8,7 @@ export class ApiService {
   baseUrl!: String;
 
   constructor(private http: HttpClient) {
-    this.baseUrl = 'http://localhost:3000';
+    this.baseUrl = 'http://localhost:3000/api';
   }
 
   public get(url: string) {
