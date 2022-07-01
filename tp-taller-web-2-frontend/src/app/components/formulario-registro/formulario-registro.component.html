@@ -1,0 +1,75 @@
+<form [formGroup]="formGroup" (ngSubmit)="onRegistrar()">
+  <div class="formularioRegistro-columna1">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Ej. Carlos"
+        formControlName="nombre"
+      />
+      <div *ngIf="formGroup.get('nombre')?.hasError('required') && envio">
+        <p style="color: red;">El nombre es requerido</p>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label"
+        >Dirección</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Calle Falsa 123"
+        formControlName="direccion"
+      />
+      <div *ngIf="formGroup.get('direccion')?.hasError('required') && envio">
+        <p style="color: red;">La direccion es requerida</p>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="name@unlam.com"
+        formControlName="email"
+      />
+      <div *ngIf="formGroup.get('email')?.hasError('required') && envio">
+        <p style="color: red;">El mail es requerido</p>
+      </div>
+    </div>
+  </div>
+  <div class="formularioRegistro-columna2">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Password"
+        formControlName="password"
+      />
+      <div *ngIf="formGroup.get('password')?.hasError('required') && envio">
+        <p style="color: red;">La contraseña es requerida</p>
+      </div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <input
+      class="w-100 btn btn-lg btn-success"
+      type="submit"
+      value="Registrarse"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="w-100 btn btn-lg btn-primary"
+      type="submit"
+      value="Volver"
+      (click)="volverAlLogin()"
+    />
+  </div>
+</form>

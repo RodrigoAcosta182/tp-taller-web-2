@@ -8,6 +8,8 @@
 
 # Node
 /node_modules
+/tp-taller-web-2-backend/node_modules
+/tp-taller-web-2-frontend/node_modules
 npm-debug.log
 yarn-error.log
 

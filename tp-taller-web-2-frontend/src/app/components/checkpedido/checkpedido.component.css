@@ -1,0 +1,17 @@
+.checkpedido-container{
+    width: 500px;
+    padding: 8px;
+    /* min-height: 336px; */
+}
+.checkpedido-botones{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 8px;
+}
+.checkpedido-total{
+    display: flex;
+    justify-content: end;
+    padding-right: 70px;
+    padding-bottom: 8px;
+}

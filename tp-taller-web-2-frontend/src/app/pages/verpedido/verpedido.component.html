@@ -1,0 +1,18 @@
+<div
+  class="titulo-verProductos d-flex justify-content-center align-items-center"
+>
+  <h2>Ver pedido</h2>
+</div>
+<div *ngIf="carrito.length <= 0" class="carrito-vacio">
+  <h3>No tenes productos en el carrito</h3>
+  <img
+    src="../../../assets/images/noProductos.png"
+    class="card-img-top"
+    alt="..."
+    style="width: 100px"
+  />
+</div>
+<div *ngIf="carrito.length > 0" class="verPedido-body">
+  <app-carrito></app-carrito>
+  <app-checkpedido></app-checkpedido>
+</div>
