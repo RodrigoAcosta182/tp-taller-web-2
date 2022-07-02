@@ -25,7 +25,10 @@
       <small class="text-muted"
         >Por favor, revisar el carrito antes de realizar la compra.</small
       >
-      <button class="btn btn-success">Comprar</button>
+      <button class="btn btn-success" (click)="finalizarCompra(carrito)">Comprar</button>
     </div>
   </div>
+</div>
+<div *ngIf="success">
+  <p class="text-success">{{successStr}}</p>
 </div>
