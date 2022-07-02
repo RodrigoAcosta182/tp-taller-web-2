@@ -1,0 +1,74 @@
+<form [formGroup]="formGroup" (ngSubmit)="agregarNuevoProducto()">
+
+  <div class="formularioRegistro-columna1">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Ej. Gluteos, Barba"
+        formControlName="nombre"
+      />
+      <!-- <div *ngIf="formGroup.get('nombre')?.hasError('required') && envio">
+          <p style="color: red;">El nombre es requerido</p>
+        </div> -->
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label"
+        >Detalles</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="EJ: especificacion de zona a depilar"
+        formControlName="detalles"
+      />
+      <!-- <div *ngIf="formGroup.get('direccion')?.hasError('required') && envio">
+          <p style="color: red;">La direccion es requerida</p>
+        </div> -->
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label"
+        >Precio por sesion</label
+      >
+      <input
+        type="number"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="$1500"
+        formControlName="precio"
+      />
+      <!-- <div *ngIf="formGroup.get('email')?.hasError('required') && envio">
+          <p style="color: red;">El mail es requerido</p>
+        </div> -->
+    </div>
+  </div>
+  <div class="formularioRegistro-columna2">
+    <div class="mb-3">
+      <label for="formFile" class="form-label"
+        >Imagen del producto</label
+      >
+      <input class="form-control" type="file" id="formFile" formControlName="imagen" />
+    </div>
+
+    <!-- <div *ngIf="formGroup.get('password')?.hasError('required') && envio">
+          <p style="color: red;">La contraseña es requerida</p>
+        </div> -->
+  </div>
+  <div class="mb-3">
+    <input
+      class="w-100 btn btn-lg btn-success"
+      type="submit"
+      value="Agregar Producto"
+    />
+  </div>
+  <div class="mb-3">
+    <input
+      class="w-100 btn btn-lg btn-primary"
+      value="Volver"
+      (click)="volverAlHome()"
+    />
+  </div>
+</form>

@@ -34,5 +34,12 @@ export class NavbarComponent implements OnInit, DoCheck {
     this.cookieService.delete("token_access")
     this.router.navigate(["/"])
   }
+  
+  irANuevoProducto(){
+    this.router.navigate(["/nuevoproducto"])
+
+  }
+  
+
 }
 
