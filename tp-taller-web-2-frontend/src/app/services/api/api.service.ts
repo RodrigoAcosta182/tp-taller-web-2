@@ -12,7 +12,7 @@ export class ApiService {
   }
 
   public get(url: string) {
-    return this.http.get(url);
+    return this.http.get(this.baseUrl + url);
   }
 
   public post(url: string, body: any) {
