@@ -32,7 +32,7 @@ export class CarritoComponent implements OnInit {
 
   onChangeSesiones(e: any, producto: any) {
     this.cantidadSeleccionada = e.target.value;
-    this.actualizarSesiones(producto.id, this.cantidadSeleccionada);
+    this.actualizarSesiones(producto._id, this.cantidadSeleccionada);
   }
 
   actualizarSesiones(id: any, valor: number) {
