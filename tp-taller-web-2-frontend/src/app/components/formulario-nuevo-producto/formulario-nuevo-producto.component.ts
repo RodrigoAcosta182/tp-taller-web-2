@@ -25,7 +25,6 @@ export class FormularioNuevoProductoComponent implements OnInit {
   errorStr!: String;
   base64textString!: String;
   error!: Boolean;
-  base64!: String;
   fileSelected?: Blob;
   imageUrl!: String;
 
@@ -48,7 +47,6 @@ export class FormularioNuevoProductoComponent implements OnInit {
   agregarNuevoProducto() {
     this.loading = true;
     this.nombre = this.formGroup.get('nombre')?.value;
-    this.imagen = this.formGroup.get('imagen')?.value;
     this.detalles = this.formGroup.get('detalles')?.value;
     this.precio = this.formGroup.get('precio')?.value;
     if (this.nombre != '') {
@@ -57,7 +55,7 @@ export class FormularioNuevoProductoComponent implements OnInit {
         imagen: this.imagen,
         detalles: this.detalles,
         precio: this.precio,
-        cantidadSesiones: 0,
+        cantidadSesiones: 1,
         estado: false,
       };
       console.log(productoDto);
@@ -85,25 +83,14 @@ export class FormularioNuevoProductoComponent implements OnInit {
     this.router.navigate(['/home']);
   }
 
-  handleFileSelect(file: File) {
-    this.fileSelected = file;
-    // this.imageUrl = this.sant.bypassSecurityTrustUrl(
-    //   window.URL.createObjectURL(this.fileSelected)
-    // ) as string;
-    const reader = new FileReader();
-    reader.readAsDataURL(this.fileSelected as Blob);
-    reader.onloadend = () =>{
-      this.base64 = reader.result as string;
-      console.log(this.base64)
+  handleFileSelect(file: any) {
+    this.fileSelected = file.target.files[0];
+    let reader = new FileReader();
+    if (this.fileSelected) {
+      reader.readAsDataURL(this.fileSelected as Blob);
     }
-
+    reader.onloadend = () => {
+      this.imagen = reader.result as string;
+    };
   }
-
-  // imagenToBase64(): void {
-  //   const reader = new FileReader();
-  //   reader.readAsDataURL(this.fileSelected as Blob);
-  //   reader.onloadend = () =>{
-  //     this.base64 = reader.result as string;
-  //   }
-  // }
 }

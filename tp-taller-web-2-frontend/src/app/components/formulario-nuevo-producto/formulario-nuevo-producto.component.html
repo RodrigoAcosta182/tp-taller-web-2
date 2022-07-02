@@ -47,10 +47,10 @@
   </div>
   <div class="formularioRegistro-columna2">
     <div class="mb-3">
-      <label for="formFile" class="form-label"
+      <label for="file" class="form-label"
         >Imagen del producto</label
       >
-      <input (ngModelChange)="handleFileSelect($event.target?.files)" class="form-control" type="file" id="formFile" formControlName="imagen" />
+      <input (change)="handleFileSelect($event)" accept="image/*" class="form-control" type="file" id="file" formControlName="imagen" />
     </div>
 
     <!-- <div *ngIf="formGroup.get('password')?.hasError('required') && envio">
