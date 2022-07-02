@@ -26,8 +26,6 @@ var controller = {
     cognitoUser.authenticateUser(authenticationDetails, {
       onSuccess: function (result) {
         console.log("access token + " + result.getAccessToken().getJwtToken());
-        // console.log("id token + " + result.getIdToken().getJwtToken());
-        // console.log("refresh token + " + result.getRefreshToken().getToken());
         //respuesta del post, puse para que devuelva el token, hay que ver como traer los datos del usuario
         var sessionUser = jwt_decode(result.getAccessToken().getJwtToken());
         var resData = {
