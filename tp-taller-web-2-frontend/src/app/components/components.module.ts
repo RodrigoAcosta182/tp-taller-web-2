@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { CheckpedidoComponent } from './checkpedido/checkpedido.component';
 import { FormularioConfirmarUsuarioComponent } from './formulario-confirmar-usuario/formulario-confirmar-usuario.component';
+import { FormularioNuevoProductoComponent } from './formulario-nuevo-producto/formulario-nuevo-producto.component';
 
 // en exports voy agregando los componentes
 
@@ -27,6 +28,7 @@ import { FormularioConfirmarUsuarioComponent } from './formulario-confirmar-usua
     FormularioCambioPasswordComponent,
     CheckpedidoComponent,
     FormularioConfirmarUsuarioComponent,
+    FormularioNuevoProductoComponent,
   ],
   imports: [CommonModule, ReactiveFormsModule, FormsModule, BrowserModule],
   exports: [
@@ -39,7 +41,8 @@ import { FormularioConfirmarUsuarioComponent } from './formulario-confirmar-usua
     FormularioRecuperarCuentaComponent,
     FormularioCambioPasswordComponent,
     CheckpedidoComponent,
-    FormularioConfirmarUsuarioComponent
+    FormularioConfirmarUsuarioComponent,
+    FormularioNuevoProductoComponent
   ],
 })
 export class ComponentsModule {}

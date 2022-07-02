@@ -6,6 +6,7 @@ import { ConfirmarusuarioComponent } from 'src/app/pages/confirmarusuario/confir
 import { HomeComponent } from 'src/app/pages/home/home.component';
 
 import { LoginComponent } from 'src/app/pages/login/login.component';
+import { NuevoproductoComponent } from 'src/app/pages/nuevoproducto/nuevoproducto.component';
 import { RecuperarcuentaComponent } from 'src/app/pages/recuperarcuenta/recuperarcuenta.component';
 import { SignupComponent } from 'src/app/pages/signup/signup.component';
 import { VerpedidoComponent } from 'src/app/pages/verpedido/verpedido.component';
@@ -19,5 +20,6 @@ export const routes: Routes = [
   { path: 'recuperarcuenta', component: RecuperarcuentaComponent },
   { path: 'confirmarusuario', component: ConfirmarusuarioComponent },
   { path: 'verpedido', component: VerpedidoComponent, canActivate: [VigilanteGuard] },
+  { path: 'nuevoproducto', component: NuevoproductoComponent, canActivate: [VigilanteGuard] },
   { path: '**', pathMatch: 'full', redirectTo: 'login' },
 ];
