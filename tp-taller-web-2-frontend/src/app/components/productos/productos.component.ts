@@ -1,7 +1,7 @@
 import { Component, DoCheck, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api/api.service';
 import { carritoProductos } from '../carrito/carritoProductos';
-import { listaProductosDisponibles } from './listaProductosDisponibles';
+
 
 @Component({
   selector: 'app-productos',
@@ -9,7 +9,7 @@ import { listaProductosDisponibles } from './listaProductosDisponibles';
   styleUrls: ['./productos.component.css'],
 })
 export class ProductosComponent implements OnInit, DoCheck {
-  // productos = listaProductosDisponibles;
+  
   productos: any;
   carrito = carritoProductos;
   data: any;

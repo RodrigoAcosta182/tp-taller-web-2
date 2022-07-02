@@ -46,7 +46,6 @@ export class LoginComponent implements OnInit {
     this.formGroup = this.formBuilder.group({
       usuario: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required),
-      recordardatos: new FormControl(false, Validators.required),
     });
   }
 
@@ -54,7 +53,6 @@ export class LoginComponent implements OnInit {
     this.loading = true;
     this.usuario = this.formGroup.get('usuario')?.value;
     this.password = this.formGroup.get('password')?.value;
-    this.recordardatos = this.formGroup.get('recordardatos')?.value;
     if (this.usuario != '' && this.password != '') {
       const usuarioDto = {
         email: this.usuario,
