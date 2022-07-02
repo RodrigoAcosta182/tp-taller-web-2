@@ -2,7 +2,7 @@ import { IProducto } from "src/app/models/producto.interface";
 
 export const listaProductosDisponibles : IProducto[] = [
   {
-    id: 1,
+    _id: 1,
     nombre: 'Barba',
     detalles: 'productDetail1',
     precio: 100,
@@ -11,7 +11,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 2,
+    _id: 2,
     nombre: 'Genitales',
     detalles: 'productDetail2',
     precio: 100,
@@ -20,7 +20,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 3,
+    _id: 3,
     nombre: 'Abdomen',
     detalles: 'productDetail3',
     precio: 100,
@@ -29,7 +29,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 4,
+    _id: 4,
     nombre: 'Antebrazos',
     detalles: 'productDetail4',
     precio: 100,
@@ -38,7 +38,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 5,
+    _id: 5,
     nombre: 'Areolas',
     detalles: 'productDetail1',
     precio: 100,
@@ -47,7 +47,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 6,
+    _id: 6,
     nombre: 'Axila',
     detalles: 'productDetail2',
     precio: 100,
@@ -56,7 +56,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 7,
+    _id: 7,
     nombre: 'Bozo/Bigote',
     detalles: 'productDetail3',
     precio: 100,
@@ -65,7 +65,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 8,
+    _id: 8,
     nombre: 'Brazos completos',
     detalles: 'productDetail4',
     precio: 100,
@@ -74,7 +74,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 9,
+    _id: 9,
     nombre: 'Cavado extendido',
     detalles: 'productDetail1',
     precio: 100,
@@ -83,7 +83,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 10,
+    _id: 10,
     nombre: 'Cuello interior',
     detalles: 'productDetail2',
     precio: 100,
@@ -92,7 +92,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 11,
+    _id: 11,
     nombre: 'Cuello posterior',
     detalles: 'productDetail3',
     precio: 100,
@@ -101,7 +101,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 12,
+    _id: 12,
     nombre: 'Escote',
     detalles: 'productDetail4',
     precio: 100,
@@ -110,7 +110,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 13,
+    _id: 13,
     nombre: 'Espalda completa',
     detalles: 'productDetail1',
     precio: 100,
@@ -119,7 +119,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 14,
+    _id: 14,
     nombre: 'Espalda superior',
     detalles: 'productDetail2',
     precio: 100,
@@ -128,7 +128,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 15,
+    _id: 15,
     nombre: 'Espalda media',
     detalles: 'productDetail3',
     precio: 100,
@@ -137,7 +137,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 16,
+    _id: 16,
     nombre: 'Espalda inferior',
     detalles: 'productDetail4',
     precio: 100,
@@ -146,7 +146,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 17,
+    _id: 17,
     nombre: 'Gluteos',
     detalles: 'productDetail1',
     precio: 100,
@@ -155,7 +155,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 18,
+    _id: 18,
     nombre: 'Hombros',
     detalles: 'productDetail2',
     precio: 100,
@@ -164,7 +164,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 19,
+    _id: 19,
     nombre: 'Linea alba',
     detalles: 'productDetail3',
     precio: 100,
@@ -173,7 +173,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 20,
+    _id: 20,
     nombre: 'Manos',
     detalles: 'productDetail4',
     precio: 100,
@@ -182,7 +182,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 21,
+    _id: 21,
     nombre: 'Media pierna',
     detalles: 'productDetail1',
     precio: 100,
@@ -191,7 +191,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 22,
+    _id: 22,
     nombre: 'Menton',
     detalles: 'productDetail2',
     precio: 100,
@@ -200,7 +200,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 23,
+    _id: 23,
     nombre: 'Muslos',
     detalles: 'productDetail3',
     precio: 100,
@@ -209,7 +209,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 24,
+    _id: 24,
     nombre: 'Muslos anterior',
     detalles: 'productDetail4',
     precio: 100,
@@ -218,7 +218,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 25,
+    _id: 25,
     nombre: 'Muslos posterior',
     detalles: 'productDetail1',
     precio: 100,
@@ -227,7 +227,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 26,
+    _id: 26,
     nombre: 'Patillas',
     detalles: 'productDetail2',
     precio: 100,
@@ -236,7 +236,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 27,
+    _id: 27,
     nombre: 'Pierna entera',
     detalles: 'productDetail3',
     precio: 100,
@@ -245,7 +245,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 28,
+    _id: 28,
     nombre: 'Pies',
     detalles: 'productDetail4',
     precio: 100,
@@ -254,7 +254,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 29,
+    _id: 29,
     nombre: 'Rosto completo',
     detalles: 'productDetail1',
     precio: 100,
@@ -263,7 +263,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 30,
+    _id: 30,
     nombre: 'Submenton',
     detalles: 'productDetail2',
     precio: 100,
@@ -272,7 +272,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 31,
+    _id: 31,
     nombre: 'Tira de cola',
     detalles: 'productDetail3',
     precio: 100,
@@ -281,7 +281,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 32,
+    _id: 32,
     nombre: 'Pabellon auricular',
     detalles: 'productDetail4',
     precio: 100,
@@ -290,7 +290,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 33,
+    _id: 33,
     nombre: 'Nariz',
     detalles: 'productDetail4',
     precio: 100,
@@ -299,7 +299,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 34,
+    _id: 34,
     nombre: 'Entrecejo',
     detalles: 'productDetail1',
     precio: 100,
@@ -308,7 +308,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 35,
+    _id: 35,
     nombre: 'Rodillas',
     detalles: 'productDetail2',
     precio: 100,
@@ -317,7 +317,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 36,
+    _id: 36,
     nombre: 'Muslos interno',
     detalles: 'productDetail3',
     precio: 100,
@@ -326,7 +326,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 37,
+    _id: 37,
     nombre: 'Frente',
     detalles: 'productDetail4',
     precio: 100,
@@ -335,7 +335,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 38,
+    _id: 38,
     nombre: 'Medio gluteo',
     detalles: 'productDetail1',
     precio: 100,
@@ -344,7 +344,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 39,
+    _id: 39,
     nombre: 'Brazo superior',
     detalles: 'productDetail2',
     precio: 100,
@@ -353,7 +353,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 40,
+    _id: 40,
     nombre: 'Torax',
     detalles: 'productDetail3',
     precio: 100,
@@ -362,7 +362,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 41,
+    _id: 41,
     nombre: 'Pomulos',
     detalles: 'productDetail4',
     precio: 100,
@@ -371,7 +371,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 42,
+    _id: 42,
     nombre: 'Cabeza',
     detalles: 'productDetail1',
     precio: 100,
@@ -380,7 +380,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 43,
+    _id: 43,
     nombre: 'Labios mujer',
     detalles: 'productDetail2',
     precio: 100,
@@ -389,7 +389,7 @@ export const listaProductosDisponibles : IProducto[] = [
     estado: false
   },
   {
-    id: 44,
+    _id: 44,
     nombre: 'Boxer',
     detalles: 'productDetail3',
     precio: 100,
