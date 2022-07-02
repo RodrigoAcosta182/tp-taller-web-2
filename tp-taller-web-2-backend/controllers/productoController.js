@@ -30,6 +30,10 @@ var controller = {
       }
     });
   },
+  confirmarCompra: (req, res) => {
+    console.log("la compra se realizo con exito:" + JSON.stringify(req.body))
+    res.status(200).jsonp("Compra realizada correctamente");
+  },
 };
 
 module.exports = controller;
