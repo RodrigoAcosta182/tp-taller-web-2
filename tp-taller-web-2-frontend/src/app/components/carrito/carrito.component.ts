@@ -37,7 +37,7 @@ export class CarritoComponent implements OnInit {
 
   actualizarSesiones(id: any, valor: number) {
     const elementoEncontrado = this.carrito.findIndex((elemento) => {
-      return elemento.id == id;
+      return elemento._id == id;
     });
     this.carrito[elementoEncontrado]['cantidadSesiones'] = valor;
   }

@@ -32,7 +32,7 @@ export class ProductosComponent implements OnInit, DoCheck {
 
   ngDoCheck(): void {
     this.productos.forEach((key: any, val: any) => {
-      const busq = this.carrito.find((x) => x.id == this.productos[val].id);
+      const busq = this.carrito.find((x) => x._id == this.productos[val]._id);
       if (busq) {
         this.productos[val].estado = true;
       } else {
@@ -43,7 +43,7 @@ export class ProductosComponent implements OnInit, DoCheck {
 
   agregarProducto(producto: any) {
     const productoYaSeleccionado = this.carrito.filter(
-      (item) => item.id === producto.id
+      (item) => item._id === producto.id
     );
     if (productoYaSeleccionado.length > 0) {
       // productoYaSeleccionado[0].estado = true
