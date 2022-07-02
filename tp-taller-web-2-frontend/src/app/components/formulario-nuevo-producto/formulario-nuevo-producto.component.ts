@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api/api.service';
 
@@ -22,12 +23,16 @@ export class FormularioNuevoProductoComponent implements OnInit {
   loading!: Boolean;
   isLogged!: Boolean;
   errorStr!: String;
+  base64textString!: String;
   error!: Boolean;
+  fileSelected?: Blob;
+  imageUrl!: String;
 
   constructor(
     private router: Router,
     private apiService: ApiService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private sant: DomSanitizer
   ) {}
 
   ngOnInit(): void {
@@ -42,7 +47,6 @@ export class FormularioNuevoProductoComponent implements OnInit {
   agregarNuevoProducto() {
     this.loading = true;
     this.nombre = this.formGroup.get('nombre')?.value;
-    this.imagen = this.formGroup.get('imagen')?.value;
     this.detalles = this.formGroup.get('detalles')?.value;
     this.precio = this.formGroup.get('precio')?.value;
     if (this.nombre != '') {
@@ -51,7 +55,7 @@ export class FormularioNuevoProductoComponent implements OnInit {
         imagen: this.imagen,
         detalles: this.detalles,
         precio: this.precio,
-        cantidadSesiones: 0,
+        cantidadSesiones: 1,
         estado: false,
       };
       console.log(productoDto);
@@ -77,5 +81,16 @@ export class FormularioNuevoProductoComponent implements OnInit {
 
   volverAlHome() {
     this.router.navigate(['/home']);
+  }
+
+  handleFileSelect(file: any) {
+    this.fileSelected = file.target.files[0];
+    let reader = new FileReader();
+    if (this.fileSelected) {
+      reader.readAsDataURL(this.fileSelected as Blob);
+    }
+    reader.onloadend = () => {
+      this.imagen = reader.result as string;
+    };
   }
 }
