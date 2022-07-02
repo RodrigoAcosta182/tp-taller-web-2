@@ -1,5 +1,5 @@
 const AmazonCognitoIdentity = require("amazon-cognito-identity-js");
-const jwt_decode = require('jwt-decode');
+const jwt_decode = require("jwt-decode");
 global.fetch = require("node-fetch");
 
 const poolData = {
@@ -25,17 +25,24 @@ var controller = {
     var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
     cognitoUser.authenticateUser(authenticationDetails, {
       onSuccess: function (result) {
-        console.log("access token + " + result.getAccessToken().getJwtToken());
+        // console.log("access token + " + result.getAccessToken().getJwtToken());
         // console.log("id token + " + result.getIdToken().getJwtToken());
         // console.log("refresh token + " + result.getRefreshToken().getToken());
         //respuesta del post, puse para que devuelva el token, hay que ver como traer los datos del usuario
         var sessionUser = jwt_decode(result.getAccessToken().getJwtToken());
-        var resData = {
-          Token: result.getAccessToken().getJwtToken(),
-          Rol: sessionUser['cognito:groups'][0],
-        };
+        var resData;
+        if (sessionUser["cognito:groups"] !== undefined) {
+          resData = {
+            Token: result.getAccessToken().getJwtToken(),
+            Rol: sessionUser["cognito:groups"][0],
+          };
+        } else {
+          resData = {
+            Token: result.getAccessToken().getJwtToken(),
+            Rol: "SinPermisos",
+          };
+        }
         res.status(200).jsonp(resData);
-
       },
       onFailure: function (err) {
         const error = {
