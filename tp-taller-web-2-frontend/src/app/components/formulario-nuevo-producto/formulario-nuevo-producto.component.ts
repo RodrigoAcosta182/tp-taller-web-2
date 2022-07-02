@@ -58,21 +58,20 @@ export class FormularioNuevoProductoComponent implements OnInit {
         cantidadSesiones: 1,
         estado: false,
       };
-      console.log(productoDto);
-      // this.apiService.post('/agregar-producto', productoDto).subscribe(
-      //   (respuesta) => {
-      //     if (respuesta !== null && respuesta !== undefined) {
-      //       this.loading = false;
-      //       this.error = false;
-      //     }
-      //   },
-      //   (err) => {
-      //     500;
-      //     this.error = true;
-      //     this.loading = false;
-      //     this.errorStr = err.error.message;
-      //   }
-      // );
+      this.apiService.post('/agregar-producto', productoDto).subscribe(
+        (respuesta) => {
+          if (respuesta !== null && respuesta !== undefined) {
+            this.loading = false;
+            this.error = false;
+          }
+        },
+        (err) => {
+          500;
+          this.error = true;
+          this.loading = false;
+          this.errorStr = err.error.message;
+        }
+      );
     } else {
       alert('los campos usuario o password no pueden estar vacios');
       this.loading = false;
