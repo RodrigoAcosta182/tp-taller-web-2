@@ -50,7 +50,7 @@
       <label for="formFile" class="form-label"
         >Imagen del producto</label
       >
-      <input class="form-control" type="file" id="formFile" formControlName="imagen" />
+      <input (ngModelChange)="handleFileSelect($event.target?.files)" class="form-control" type="file" id="formFile" formControlName="imagen" />
     </div>
 
     <!-- <div *ngIf="formGroup.get('password')?.hasError('required') && envio">

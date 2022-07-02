@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api/api.service';
 
@@ -22,12 +23,17 @@ export class FormularioNuevoProductoComponent implements OnInit {
   loading!: Boolean;
   isLogged!: Boolean;
   errorStr!: String;
+  base64textString!: String;
   error!: Boolean;
+  base64!: String;
+  fileSelected?: Blob;
+  imageUrl!: String;
 
   constructor(
     private router: Router,
     private apiService: ApiService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private sant: DomSanitizer
   ) {}
 
   ngOnInit(): void {
@@ -78,4 +84,26 @@ export class FormularioNuevoProductoComponent implements OnInit {
   volverAlHome() {
     this.router.navigate(['/home']);
   }
+
+  handleFileSelect(file: File) {
+    this.fileSelected = file;
+    // this.imageUrl = this.sant.bypassSecurityTrustUrl(
+    //   window.URL.createObjectURL(this.fileSelected)
+    // ) as string;
+    const reader = new FileReader();
+    reader.readAsDataURL(this.fileSelected as Blob);
+    reader.onloadend = () =>{
+      this.base64 = reader.result as string;
+      console.log(this.base64)
+    }
+
+  }
+
+  // imagenToBase64(): void {
+  //   const reader = new FileReader();
+  //   reader.readAsDataURL(this.fileSelected as Blob);
+  //   reader.onloadend = () =>{
+  //     this.base64 = reader.result as string;
+  //   }
+  // }
 }
