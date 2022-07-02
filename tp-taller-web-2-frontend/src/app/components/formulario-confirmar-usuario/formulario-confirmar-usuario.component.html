@@ -1,4 +1,3 @@
-
 <form
   [formGroup]="formGroup"
   (ngSubmit)="activarCuenta()"
@@ -17,9 +16,19 @@
     />
   </div>
 
+  <div *ngIf="formGroup.get('codigoConfirmacion')?.hasError('required') && envio">
+    <p style="color: red;">El codigo de confirmación es requerido</p>
+  </div>
+  <div *ngIf="success">
+    <p class="text-success">El usuario se activo correctamente</p>
+  </div>
+
   <div class="mb-3">
-    <input class="w-100 btn btn-lg btn-success" value="Activar Cuenta" type="submit" />
-    
+    <input
+      class="w-100 btn btn-lg btn-success"
+      value="Activar Cuenta"
+      type="submit"
+    />
   </div>
   <div class="mb-3">
     <input

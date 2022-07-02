@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api/api.service';
 import { CookieService } from 'ngx-cookie-service';
 import { cuentaConfirmar } from 'src/app/components/formulario-confirmar-usuario/cuentaConfirmar';
+import { mensajeConfirmar } from 'src/app/components/formulario-confirmar-usuario/mensajeConfirmar';
 
 @Component({
   selector: 'app-login',
@@ -27,6 +28,8 @@ export class LoginComponent implements OnInit {
   isLogged!: Boolean;
   errorStr!: String;
   error!: Boolean;
+  mensaje!: String;
+  strSuccess!: Boolean;
 
   constructor(
     protected router: Router,
@@ -64,7 +67,8 @@ export class LoginComponent implements OnInit {
           if (respuesta !== null && respuesta !== undefined) {
             this.loading = false;
             this.authToken = respuesta;
-            this.cookieService.set('token_access', this.authToken, 4, '/');
+            this.cookieService.set('token_access', this.authToken.Token, 4, '/');
+            this.cookieService.set('rol', this.authToken.Rol, 4, '/');
             this.router.navigate(['/home']);
             this.error = false;
           }

@@ -27,6 +27,7 @@ export class FormularioNuevoProductoComponent implements OnInit {
   error!: Boolean;
   fileSelected?: Blob;
   imageUrl!: String;
+  envio!: Boolean;
 
   constructor(
     private router: Router,
@@ -49,7 +50,8 @@ export class FormularioNuevoProductoComponent implements OnInit {
     this.nombre = this.formGroup.get('nombre')?.value;
     this.detalles = this.formGroup.get('detalles')?.value;
     this.precio = this.formGroup.get('precio')?.value;
-    if (this.nombre != '') {
+    if (this.nombre != '' && this.detalles !== '' && this.precio !== null) {
+      this.envio = false;
       const productoDto = {
         nombre: this.nombre,
         imagen: this.imagen,
@@ -63,6 +65,7 @@ export class FormularioNuevoProductoComponent implements OnInit {
           if (respuesta !== null && respuesta !== undefined) {
             this.loading = false;
             this.error = false;
+            this.router.navigate(['/home']);
           }
         },
         (err) => {
@@ -73,7 +76,7 @@ export class FormularioNuevoProductoComponent implements OnInit {
         }
       );
     } else {
-      alert('los campos usuario o password no pueden estar vacios');
+      this.envio = true;
       this.loading = false;
     }
   }

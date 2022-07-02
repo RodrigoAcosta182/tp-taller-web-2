@@ -26,14 +26,6 @@ export class FormularioRegistroComponent implements OnInit {
     private formBuilder: FormBuilder,
     private apiService: ApiService
   ) {
-    this.formGroup = this.formBuilder.group({
-      name: ['', [Validators.required]],
-      company: ['', [Validators.required]],
-      email: ['', [Validators.required]],
-      age: ['', [Validators.required]],
-      url: ['', [Validators.required]],
-      password: ['', [Validators.required]],
-    });
   }
 
   ngOnInit(): void {
