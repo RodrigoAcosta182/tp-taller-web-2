@@ -15,13 +15,9 @@ var controller = {
       }
     });
   },
-  getProductoById: (req, res) => {
-    console.log("byId");
-  },
   agregarProducto: (req, res) => {
     const data = req.body;
     const producto = new model(data);
-  
     producto.save((err, doc) => {
       if (!err) {
         res.status(200).jsonp(req.body);
