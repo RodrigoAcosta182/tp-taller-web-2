@@ -12,6 +12,7 @@ import { CambiarpasswordComponent } from './cambiarpassword/cambiarpassword.comp
 import { RecuperarcuentaComponent } from './recuperarcuenta/recuperarcuenta.component';
 import { VerpedidoComponent } from './verpedido/verpedido.component';
 import { ConfirmarusuarioComponent } from './confirmarusuario/confirmarusuario.component';
+import { NuevoproductoComponent } from './nuevoproducto/nuevoproducto.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ConfirmarusuarioComponent } from './confirmarusuario/confirmarusuario.c
     RecuperarcuentaComponent,
     VerpedidoComponent,
     ConfirmarusuarioComponent,
+    NuevoproductoComponent,
   ],
   imports: [
     CommonModule,
