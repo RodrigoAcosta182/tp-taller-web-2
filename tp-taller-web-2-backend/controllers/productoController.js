@@ -24,25 +24,16 @@ var controller = {
   
     producto.save((err, doc) => {
       if (!err) {
-        console.log("success", "User added successfully!");
+        res.status(200).jsonp(req.body);
       } else {
-        console.log("Error during record insertion : " + err);
+         res.json({
+          status: 400,
+          mensaje: "error guardando producto",
+          err,
+        });
       }
     });
   },
 };
 
 module.exports = controller;
-
-// exports.getData = (req, res) => {
-//   res.send({ data: "esto viene desde productos " });
-// };
-
-// exports.getData = (req, res) => {
-//   model.find({}, (err, docs) => {
-//     res.send({
-//       docs,
-//     });
-//   });
-// };
-// //5.38
