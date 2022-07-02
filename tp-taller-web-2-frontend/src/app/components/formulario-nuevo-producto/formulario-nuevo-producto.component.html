@@ -74,4 +74,7 @@
       (click)="volverAlHome()"
     />
   </div>
+  <div *ngIf="success">
+    <p class="text-success">{{successStr}}</p>
+  </div>
 </form>

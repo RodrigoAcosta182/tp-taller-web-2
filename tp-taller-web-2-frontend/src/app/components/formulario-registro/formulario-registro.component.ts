@@ -19,14 +19,17 @@ export class FormularioRegistroComponent implements OnInit {
   direccion!: String;
   email!: String;
   password!: String;
+  successStr!: String;
   envio!: Boolean;
+  loading!: Boolean;
+  success!: Boolean;
+  
 
   constructor(
     protected router: Router,
     private formBuilder: FormBuilder,
     private apiService: ApiService
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
@@ -58,19 +61,27 @@ export class FormularioRegistroComponent implements OnInit {
       this.apiService
         .post('/registrar-usuario', usuarioDto)
         .subscribe((respuesta) => {
-          console.log('usuario registrado');
-          this.router.navigate(['/login']);
+          if (respuesta !== null && respuesta !== undefined) {
+            this.loading = false;
+            this.envio = false;
+            this.success = true;
+            this.successStr = 'Usuario registrado correctamente';
+            setTimeout(() => {
+              this.successStr = '';
+              this.success = false;
+              this.router.navigate(['/home']);
+            }, 3000);
+          }
         });
     } else {
-      console.log ("Los campos no pueden estar vacios");
-      this.envio = true
+      this.envio = true;
     }
-
   }
-  get name() {return this.formGroup.get('nombre'); }
+  get name() {
+    return this.formGroup.get('nombre');
+  }
 
-  
-  volverAlLogin(){
-    this.router.navigate(["/login"])
+  volverAlLogin() {
+    this.router.navigate(['/login']);
   }
 }

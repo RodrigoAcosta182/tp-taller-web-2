@@ -27,16 +27,8 @@
       <label for="floatingPassword">Password</label>
     </div>
     <div class="checkbox mb-3">
-      <!-- <label>
-        <input
-          type="checkbox"
-          formControlName="recordardatos"
-          value="remember-me"
-        />
-        Recordarme
-      </label> -->
       <div class="login-error-container">
-        <span *ngIf="error" class="text-danger fw-bold">{{errorStr}}</span>
+        <span *ngIf="error" class="text-danger fw-bold">{{ errorStr }}</span>
       </div>
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit" value="Ingresar">
@@ -49,22 +41,15 @@
 
     <!-- el navigate lo hago por funcion porque va mas rapido que una etiqueta <a> -->
     <label
-      >No tenes usuario / problemas para ingresar?
+      >No tenes usuario?
       <span
         class="text-decoration-underline pointer text-primary"
         (click)="irARegistro()"
         >Registrate</span
       >
-      o
-      <span
-        class="text-decoration-underline pointer text-primary"
-        (click)="irARecuperarCuenta()"
-        >Recupera tu cuenta</span
-      >
     </label>
-
 
     <p class="mt-5 mb-3 text-muted">&copy;Company 2022</p>
   </form>
 </main>
-<img src="">
+<img src="" />

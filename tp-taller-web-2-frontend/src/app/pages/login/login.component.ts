@@ -50,8 +50,6 @@ export class LoginComponent implements OnInit {
     });
   }
 
-
-
   onLogin() {
     this.loading = true;
     this.usuario = this.formGroup.get('usuario')?.value;
@@ -67,7 +65,12 @@ export class LoginComponent implements OnInit {
           if (respuesta !== null && respuesta !== undefined) {
             this.loading = false;
             this.authToken = respuesta;
-            this.cookieService.set('token_access', this.authToken.Token, 4, '/');
+            this.cookieService.set(
+              'token_access',
+              this.authToken.Token,
+              4,
+              '/'
+            );
             this.cookieService.set('rol', this.authToken.Rol, 4, '/');
             this.router.navigate(['/home']);
             this.error = false;
@@ -78,16 +81,16 @@ export class LoginComponent implements OnInit {
           this.error = true;
           this.loading = false;
           if (err.error.code != 'UserNotConfirmedException') {
-            alert(err.error.code);
+            this.errorStr = err.error.message;
           } else {
             this.router.navigate(['/confirmarusuario']);
             cuentaConfirmar.usuario = this.usuario;
           }
-          this.errorStr = err.error.message;
         }
       );
     } else {
-      alert('los campos usuario o password no pueden estar vacios');
+      this.error = true;
+      this.errorStr = 'Los campos son requeridos';
       this.loading = false;
     }
   }
@@ -98,5 +101,4 @@ export class LoginComponent implements OnInit {
   irARecuperarCuenta() {
     this.router.navigate(['/recuperarcuenta']);
   }
-
 }

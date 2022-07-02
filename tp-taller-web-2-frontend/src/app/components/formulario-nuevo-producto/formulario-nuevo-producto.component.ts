@@ -27,7 +27,9 @@ export class FormularioNuevoProductoComponent implements OnInit {
   error!: Boolean;
   fileSelected?: Blob;
   imageUrl!: String;
+  successStr!: String;
   envio!: Boolean;
+  success!: Boolean;
 
   constructor(
     private router: Router,
@@ -65,11 +67,19 @@ export class FormularioNuevoProductoComponent implements OnInit {
           if (respuesta !== null && respuesta !== undefined) {
             this.loading = false;
             this.error = false;
-            this.router.navigate(['/home']);
+            this.success = true;
+            this.successStr = respuesta as string
+            setTimeout(() => {
+              this.success = false;
+              this.successStr = ""
+              this.router.navigate(['/home']);
+            }, 5000);
           }
         },
         (err) => {
           500;
+          this.successStr = ""
+          this.success = false;
           this.error = true;
           this.loading = false;
           this.errorStr = err.error.message;

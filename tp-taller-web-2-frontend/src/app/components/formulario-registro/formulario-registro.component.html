@@ -55,6 +55,7 @@
       <div *ngIf="formGroup.get('password')?.hasError('required') && envio">
         <p style="color: red;">La contraseña es requerida</p>
       </div>
+      
     </div>
   </div>
   <div class="mb-3">
@@ -71,5 +72,8 @@
       value="Volver"
       (click)="volverAlLogin()"
     />
+  </div>
+  <div *ngIf="success">
+    <p class="text-success">{{successStr}}</p>
   </div>
 </form>
